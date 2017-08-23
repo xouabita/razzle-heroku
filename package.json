@@ -1,0 +1,12 @@
+{
+  "name": "razzle-heroku",
+  "version": "1.0.0",
+  "description": "Make razzle work on heroku seamlessly",
+  "main": "index.js",
+  "repository": "https://github.com/xouabita/razzle-heroku",
+  "author": "Alexandre Abita <xouabita@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "is-heroku": "^1.0.1"
+  }
+}
