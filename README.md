@@ -1,5 +1,5 @@
 # razzle-heroku
-Make [razzle](https://github.com/jaredpalmer/razzle) work on heroku seamlessly
+Make [razzle](https://github.com/jaredpalmer/razzle) work on heroku seamlessly.
 
 ## Quickstart :rocket:
 
@@ -14,14 +14,7 @@ module.exports = {
 
 ## Features
 
-- Allow your app to read environment variables at runtime
+- Allow your server to read environment variables at runtime. Client
+  environment variables still need to be prefixed by `RAZZLE_`
 - Bind the `$PORT` at runtime
 - Fix `RAZZLE_PUBLIC_DIR` on heroku
-
-## Why ? 🤔
-
-[Razzle](https://github.com/jaredpalmer/razzle) is a really good tool but it is hard to deploy on heroku:
-
-- You need to prefix all your environment variables by `RAZZLE_`
-- Because all environment variables are embedded during the build time, but the heroku `$PORT` is set at runtime
-- `RAZZLE_PUBLIC_DIR` is not properly set

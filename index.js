@@ -1,6 +1,8 @@
 const isHeroku = require("is-heroku")
 
 module.exports = (config, {target, dev}, webpack) => {
+  if (target !== "node") return config
+
   const isDefinePlugin = plugin => plugin.constructor.name === "DefinePlugin"
   const indexDefinePlugin = config.plugins.findIndex(isDefinePlugin)
 
