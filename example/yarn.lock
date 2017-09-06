@@ -3187,6 +3187,10 @@ is-glob@^3.1.0:
   dependencies:
     is-extglob "^2.1.0"
 
+is-heroku@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-heroku/-/is-heroku-1.0.1.tgz#46715fcd9d5ce55a9f254e6b9816735ebab38140"
+
 is-number@^2.0.2, is-number@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
@@ -4987,6 +4991,12 @@ razzle-dev-utils@^0.8.1:
     react-dev-utils "^4.0.0"
     sockjs-client "1.1.4"
     strip-ansi "4.0.0"
+
+razzle-heroku@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/razzle-heroku/-/razzle-heroku-2.0.0.tgz#8ce812d82a86e0d9599d525ccd1e8231c1328088"
+  dependencies:
+    is-heroku "^1.0.1"
 
 razzle@^0.8.3:
   version "0.8.3"
