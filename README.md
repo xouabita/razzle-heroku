@@ -1,4 +1,4 @@
-# razzle-heroku [:link:](https://razzle-heroku-example.herokuapp.com/)
+# razzle-heroku [![Build Status](https://travis-ci.org/xouabita/razzle-heroku.svg?branch=master)](https://travis-ci.org/xouabita/razzle-heroku)
 Make [razzle](https://github.com/jaredpalmer/razzle) work on heroku seamlessly.
 
 ## Quickstart :rocket:
