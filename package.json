@@ -1,6 +1,6 @@
 {
   "name": "razzle-heroku",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Make razzle work on heroku seamlessly",
   "main": "index.js",
   "repository": "https://github.com/xouabita/razzle-heroku",
@@ -17,9 +17,6 @@
     "jest": "^21.1.0"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "example"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "example"]
   }
 }
