@@ -7,6 +7,11 @@ module.exports = (config, {target, dev}, webpack) => {
   const isDefinePlugin = plugin => plugin.constructor.name === "DefinePlugin"
   const indexDefinePlugin = config.plugins.findIndex(isDefinePlugin)
 
+  if (indexDefinePlugin < 0) {
+    console.warn("Couldn't setup razzle-heroku, no DefinePlugin...")
+    return config
+  }
+
   const {definitions} = config.plugins[indexDefinePlugin]
   const newDefs = {}
 

@@ -16,6 +16,8 @@ const fakeWebpack = {
   DefinePlugin,
 }
 
+beforeEach(() => jest.resetModules())
+
 test("return the same config if target is not node", () => {
   const modify = require(".")
   const config = {
@@ -54,7 +56,6 @@ test("don't override the whole process.env if target is node", () => {
 
 test("delete env.PORT and define process.env.RAZZLE_PUBLIC_DIR on heroku", () => {
   process.env.HEROKU = 1
-  jest.resetModules()
   const modify = require(".")
   const config = {
     plugins: [
@@ -79,4 +80,18 @@ test("delete env.PORT and define process.env.RAZZLE_PUBLIC_DIR on heroku", () =>
       }),
     ],
   })
+})
+
+test("should return config if no DefinePlugin", () => {
+  const modify = require(".")
+
+  const config = {
+    plugins: [fakeInvalidPlugin],
+  }
+  const result = modify(
+    Object.assign({}, config),
+    {target: "node"},
+    fakeWebpack,
+  )
+  expect(result).toEqual(config)
 })
