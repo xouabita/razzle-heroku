@@ -10,7 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "is-heroku": "^1.0.1"
+    "is-heroku": "^1.0.1",
+    "object.entries": "^1.0.4"
   },
   "devDependencies": {
     "jest": "^21.1.0"

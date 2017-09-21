@@ -1,4 +1,5 @@
 const isHeroku = require("is-heroku")
+const entries = require("object.entries")
 
 module.exports = (config, {target, dev}, webpack) => {
   if (target !== "node") return config
@@ -11,7 +12,7 @@ module.exports = (config, {target, dev}, webpack) => {
 
   const writeDefs = ([key, val]) => (newDefs[`process.env.${key}`] = val)
 
-  Object.entries(definitions["process.env"]).forEach(writeDefs)
+  entries(definitions["process.env"]).forEach(writeDefs)
 
   if (isHeroku) {
     delete newDefs["process.env.PORT"]
