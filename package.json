@@ -6,7 +6,19 @@
   "repository": "https://github.com/xouabita/razzle-heroku",
   "author": "Alexandre Abita <xouabita@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "is-heroku": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^21.1.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "example"
+    ]
   }
 }
