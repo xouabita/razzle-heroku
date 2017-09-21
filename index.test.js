@@ -16,7 +16,10 @@ const fakeWebpack = {
   DefinePlugin,
 }
 
-beforeEach(() => jest.resetModules())
+beforeEach(() => {
+  jest.doMock("is-heroku", () => false)
+  jest.resetModules()
+})
 
 test("return the same config if target is not node", () => {
   const modify = require(".")
@@ -55,7 +58,7 @@ test("don't override the whole process.env if target is node", () => {
 })
 
 test("delete env.PORT and define process.env.RAZZLE_PUBLIC_DIR on heroku", () => {
-  process.env.HEROKU = 1
+  jest.doMock("is-heroku", () => true)
   const modify = require(".")
   const config = {
     plugins: [
