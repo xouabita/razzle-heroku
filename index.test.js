@@ -36,11 +36,9 @@ test("don't override the whole process.env if target is node", () => {
     plugins: [
       fakeInvalidPlugin,
       new DefinePlugin({
-        "process.env": {
-          foo: "bar",
-          lol: "qux",
-          PORT: 42,
-        },
+        "process.env.foo": "bar",
+        "process.env.lol": "qux",
+        "process.env.PORT": 42,
       }),
     ],
   }
@@ -64,11 +62,9 @@ test("delete env.PORT and define process.env.RAZZLE_PUBLIC_DIR on heroku", () =>
     plugins: [
       fakeInvalidPlugin,
       new DefinePlugin({
-        "process.env": {
-          foo: "bar",
-          lol: "qux",
-          PORT: 42,
-        },
+        "process.env.foo": "bar",
+        "process.env.lol": "qux",
+        "process.env.PORT": 42,
       }),
     ],
   }

@@ -13,7 +13,7 @@ module.exports = (config, {target, dev}, webpack) => {
   }
 
   const {definitions} = config.plugins[indexDefinePlugin]
-  const newDefs = { ...definitions };
+  const newDefs = Object.assign({}, definitions);
 
   if (isHeroku) {
     delete newDefs["process.env.PORT"]
